@@ -1,0 +1,27 @@
+{:tasks
+ {:requires ([babashka.fs :as fs])
+
+  install {:doc "Install npm dependencies (React, shadow-cljs)"
+           :task (shell "npm install --no-fund --no-audit")}
+
+  server {:doc "Run the Clojure API + static server on :3000"
+          :task (clojure "-M:run")}
+
+  watch {:doc "Compile ClojureScript with hot reload"
+         :task (shell "npx shadow-cljs watch app")}
+
+  -dev {:depends [server watch]}
+
+  dev {:doc "Server + ClojureScript watch in parallel. Open http://localhost:3000"
+       :task (run '-dev {:parallel true})}
+
+  build {:doc "Optimized ClojureScript build into resources/public/js"
+         :task (do (fs/delete-tree "resources/public/js")
+                   (shell "npx shadow-cljs release app"))}
+
+  start {:doc "Build the frontend, then serve on :3000"
+         :depends [build]
+         :task (clojure "-M:run")}
+
+  test {:doc "Run backend tests"
+        :task (clojure "-M:test")}}}
