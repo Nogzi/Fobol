@@ -12,3 +12,10 @@ pom.xml.asc
 .lein-failures
 .nrepl-port
 .cpcache/
+
+# xPitch
+node_modules/
+.shadow-cljs/
+resources/public/js/
+config.local.edn
+.cache/

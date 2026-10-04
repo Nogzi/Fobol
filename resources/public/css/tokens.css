@@ -1,0 +1,84 @@
+/* Design tokens — names mirror the Figma variables (color/*, space/*, radius/*). */
+:root {
+  color-scheme: light;
+  --bg-canvas: #f3f4f6;
+  --bg-surface: #ffffff;
+  --bg-surface-alt: #f8f9fb;
+  --bg-hover: #f1f3f6;
+  --bg-inverse: #0f1720;
+  --border-default: #e4e7ec;
+  --border-strong: #cdd2da;
+  --text-primary: #0f1720;
+  --text-secondary: #475467;
+  --text-muted: #8a94a6;
+  --text-on-accent: #ffffff;
+  --text-on-inverse: #ffffff;
+  --accent: #00a870;
+  --accent-soft: #e3f6ef;
+  --status-win: #12b76a;
+  --status-draw: #98a2b3;
+  --status-loss: #f04438;
+  --zone-ucl: #2e6be6;
+  --zone-uel: #f79009;
+  --zone-uecl: #12b76a;
+  --zone-relegation: #f04438;
+
+  --league-premier-league: #3d195b;
+  --league-la-liga: #ff4b44;
+  --league-bundesliga: #d20515;
+  --league-serie-a: #024494;
+  --league-ligue-1: #0e1e3e;
+  --league-superliga: #0b8f6a;
+
+  --shadow-card: 0 1px 3px rgb(15 23 32 / 0.06), 0 4px 12px rgb(15 23 32 / 0.04);
+  --shadow-dragging: 0 16px 40px -4px rgb(15 23 32 / 0.18);
+
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 999px;
+
+  --font-ui: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Barlow Condensed', 'Inter', system-ui, sans-serif;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg-canvas: #0a0e13;
+  --bg-surface: #121820;
+  --bg-surface-alt: #171f29;
+  --bg-hover: #1c2531;
+  --bg-inverse: #f2f5f8;
+  --border-default: #232d3a;
+  --border-strong: #334155;
+  --text-primary: #f2f5f8;
+  --text-secondary: #a3afbf;
+  --text-muted: #6b7686;
+  --text-on-accent: #04130d;
+  --text-on-inverse: #0f1720;
+  --accent: #22d39a;
+  --accent-soft: #0e2a21;
+  --status-win: #32d583;
+  --status-draw: #667085;
+  --status-loss: #f97066;
+  --zone-ucl: #5b8def;
+  --zone-uel: #fdb022;
+  --zone-uecl: #32d583;
+  --zone-relegation: #f97066;
+  --league-premier-league: #7b3fb5;
+  --league-ligue-1: #5e7bb8;
+  --league-superliga: #2fc79a;
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-dragging: 0 16px 40px -4px rgb(0 0 0 / 0.6);
+}

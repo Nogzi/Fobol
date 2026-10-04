@@ -1,0 +1,18 @@
+;; Copy to config.local.edn (git-ignored).
+;; Environment variables (XPITCH_PROVIDER, XPITCH_SEASON, XPITCH_REFRESH_MINUTES, API_FOOTBALL_KEY) take precedence.
+{;; :football-data (default, free, no key) or :api-football (needs a key and a plan covering the season)
+ :provider :football-data
+
+ :api-football-key "your-key-from-dashboard.api-football.com"
+
+ ;; Season = starting year (2026 means 2026/27). Defaults to the current season.
+ ;; :season 2026
+
+ ;; How often standings and fixture lists are refreshed.
+ :refresh-minutes 60
+
+ ;; Requests to keep unused from the daily quota.
+ :reserve 5
+
+ ;; Each batch fetches statistics for up to 20 finished matches (1 request).
+ :max-stat-batches 10}
